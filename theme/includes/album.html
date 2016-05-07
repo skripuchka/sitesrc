@@ -1,0 +1,31 @@
+<% if (page.preview) { %>
+    <figure>
+        <img src="${r('/images/portfolio/' + page.name + "/" + page.frontImage)}" />
+        <a rel="full-article" href="${link page.url}">
+            <span ></span>
+            View collection
+        </a>
+    </figure>
+    <h3>
+        <a href="${link page.url}" rel="full-article">
+            ${titleCase title: page.title}
+        </a>
+    </h3>
+
+    <%
+        def postedOn = page.date
+
+        final String monthFormat = 'MMM'
+        final String yearFormat = 'yyyy'
+        final String dayFormat = 'dd'
+    %>
+
+    <time datetime="${xmlDateTime date: postedOn}">
+        <span class="day">${postedOn.format(dayFormat)}</span>
+        <span class="month">${postedOn.format(monthFormat)}</span>
+        <span class="year">${postedOn.format(yearFormat)}</span>
+    </time>
+
+<% } else { %>
+    full ${page.photos}
+<% } %>

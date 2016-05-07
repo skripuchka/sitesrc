@@ -1,0 +1,24 @@
+---
+layout: default
+index: true
+sidebar: true
+---
+
+<section id="homepage" class="homepage">
+    <div class="inner-wrapper">
+        <div id="galleryContainer" class="content">
+            <ul class="home-gallery cf">
+                <%
+                    page.posts.each { post->
+                        def brief = post.render().content.split('<!--more-->').head()
+                %>
+                <li>
+                    ${ include "article.html", post + [brief: brief, preview: true] }
+                </li>
+                <%
+                    }
+                %>
+            </ul>
+        </div>
+    </div>
+</section>

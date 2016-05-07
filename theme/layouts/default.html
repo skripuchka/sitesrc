@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+
+    ${include 'head.html'}
+
+    <body ${page.sidebar != false ? '' : "class='no-sidebar'"}
+      ${page.sidebar == 'collapse' || site.sidebar == 'collapse' ? "class='collapse-sidebar sidebar-footer home'" : ''} >
+        <div id="wrapper">
+            <header id="header-main" class="header-main" role="banner">
+                ${include 'header.html'}
+            </header>
+
+          <div id="content-main" class="content-main" role="main">
+            ${content}
+          </div>
+            <footer id="footer-main" class="footer-main" role="contentinfo">
+                ${include 'footer.html'}
+            </footer>
+        </div>
+    </body>
+
+</html>

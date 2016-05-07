@@ -1,0 +1,276 @@
+/* Form Elements
+*******************************/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  font-size: 13px;
+  font-weight: 700;
+  background: transparent;
+  text-transform: uppercase;
+  border: 0;
+}
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=password],
+textarea {
+  border: 1px solid white;
+  height: 16px;
+  font-size: 12px;
+  padding: 5px;
+  -webkit-transition: all 100ms linear;
+  -moz-transition: all 100ms linear;
+  -ms-transition: all 100ms linear;
+  -o-transition: all 100ms linear;
+  transition: all 100ms linear;
+}
+textarea {
+  resize: vertical;
+}
+.fl {
+  float: left !important;
+}
+.fr {
+  float: right !important;
+}
+.l {
+  text-align: left;
+}
+.c {
+  text-align: center;
+}
+.j {
+  text-align: justify;
+}
+.r {
+  text-align: right;
+}
+
+/* Clearfix
+*******************************/
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  zoom: 1;
+}
+.clear {
+  clear: both;
+}
+/* Links
+*******************************/
+a {
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: color 100ms linear;
+  -moz-transition: color 100ms linear;
+  -ms-transition: color 100ms linear;
+  -o-transition: color 100ms linear;
+  transition: color 100ms linear;
+}
+/* Headers
+*******************************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+h1 {
+  font-size: 28px;
+}
+h2 {
+  font-size: 22px;
+}
+h3 {
+  font-size: 18px;
+}
+h4 {
+  font-size: 14px;
+}
+h5 {
+  font-size: 12px;
+}
+h6 {
+  font-size: 10px;
+}
+/* Text elements
+*******************************/
+p {
+  margin: 0 0 1em 0;
+  text-align: left;
+  line-height: 1.5;
+}
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+img {
+  border: 0;
+}
+.small {
+  font-size: 10px;
+}
+hr {
+  display: block;
+  height: 0px;
+  line-height: 0px;
+  border: 0;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  margin: 16px 0;
+  float: none;
+  clear: both;
+  padding: 0;
+}
+/* Wordpress Typo
+*******************************/
+.story {
+  line-height: 1.5;
+}
+.story ul {
+  list-style: square;
+}
+.story ul li {
+  list-style: square;
+}
+.story ol {
+  list-style: decimal;
+}
+.story ol li {
+  list-style: decimal;
+}
+.story ul,
+.story ol {
+  margin: 0 0 1em 1.5em;
+  line-height: 1.5;
+}
+.story ul ul,
+.story ol ul,
+.story ul ol,
+.story ol ol {
+  margin-bottom: 0;
+}
+.story ol ol {
+  list-style: upper-alpha;
+}
+.story ol ol ol {
+  list-style: lower-roman;
+}
+.story ol ol ol ol {
+  list-style: lower-alpha;
+}
+.story h1,
+.story h2,
+.story h3,
+.story h4,
+.story h5,
+.story h6 {
+  text-transform: none;
+  margin-bottom: .5em;
+}
+.story a {
+  -webkit-transition: color 100ms linear;
+  -moz-transition: color 100ms linear;
+  -ms-transition: color 100ms linear;
+  -o-transition: color 100ms linear;
+  transition: color 100ms linear;
+}
+.story a:link,
+.story a:visited,
+.story a:hover,
+.story a:active {
+  text-decoration: underline;
+}
+.story table {
+  width: auto;
+  border-collapse: collapse;
+  margin-bottom: 18px;
+}
+.story table td,
+.story table th {
+  padding: 6px 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+.story table th {
+  font-weight: bold;
+}
+.story pre {
+  border: 1px solid #ccc;
+  background: #eee;
+  padding: 1em 2em;
+  margin-bottom: 1em;
+}
+.story blockquote {
+  font-style: italic;
+  margin: 1em 3em;
+}
+.story blockquote p:before {
+  content: '"';
+}
+.story blockquote p:after {
+  content: '"';
+}
+.story img.size-auto,
+.story img.size-full,
+.story img.size-large,
+.story img.size-medium,
+.story .attachment img {
+  max-width: 100%;
+  /* When images are too wide for containing element, force them to fit. */
+  height: auto;
+  /* Override height to match resized width for correct aspect ratio. */
+}
+.story .alignleft,
+.story img.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1em;
+}
+.story .alignright,
+.story img.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1em;
+}
+.story .aligncenter,
+.story img.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.story img.alignleft,
+.story img.alignright,
+.story img.aligncenter {
+  margin-bottom: 1em;
+}
+.story .wp-caption {
+  line-height: 1.5;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.story .wp-caption p.wp-caption-text {
+  color: #888;
+  font-size: 11px;
+  margin: 0;
+  padding: 5px;
+}
+.story .wp-smiley {
+  margin: 0;
+}

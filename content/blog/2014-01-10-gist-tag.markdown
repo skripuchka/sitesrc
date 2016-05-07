@@ -1,0 +1,27 @@
+---
+layout: post
+title: "Gist tag"
+date: "2014-01-10 14:00"
+author: SysGears
+categories: [grain, groovy]
+frontImage: "test.jpg"
+comments: true
+published: true
+---
+
+<!--more-->
+gist body 
+
+####Code:
+
+```jsp
+<%=
+    gist id: 'dc3bf4796acd6a1439bc'
+%>
+```
+
+####Result:
+
+<%=
+    gist id: 'dc3bf4796acd6a1439bc'
+%>

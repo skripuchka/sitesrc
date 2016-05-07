@@ -1,0 +1,69 @@
+<%
+def postedOn = page.date
+
+final String monthFormat = 'MMM'
+final String yearFormat = 'yyyy'
+final String dayFormat = 'dd'
+%>
+
+<% if (page.preview) { %>
+  <figure>
+    <img src="${r('/images/blogs/' + page.frontImage)}" />
+      <a rel="full-article" href="${link page.url}">
+        <span ></span>
+        View collection
+      </a>
+  </figure>
+  <h3>
+    <a href="${link page.url}" rel="full-article">
+      ${titleCase title: page.title}
+    </a>
+  </h3>
+
+  <time datetime="${xmlDateTime date: postedOn}">
+    <span class="day">${postedOn.format(dayFormat)}</span>
+    <span class="month">${postedOn.format(monthFormat)}</span>
+    <span class="year">${postedOn.format(yearFormat)}</span>
+  </time>
+
+<% } else { %>
+
+  <div class="gallery-single">
+    <div class="inner-wrapper cf">
+      <div class="inner-header cf">
+        <div class="left-part">
+
+          <span class="cat-name">
+            Category: ${page.categories.collect { it.toString() }.join(', ') }
+          </span>
+
+          <h2>${page.title}</h2>
+
+          <time datetime="${xmlDateTime date: postedOn}">
+            <span class="day">${postedOn.format(dayFormat)}</span>
+            <span class="month">${postedOn.format(monthFormat)}</span>
+            <span class="year">${postedOn.format(yearFormat)}</span>
+          </time>
+
+          <a class="go-back" href="/">Back</a>
+
+        </div>
+      </div>
+      <div class="gallery-wrapper">
+        <ul id="galleryContainer" class="gallery cf">
+          <% page.photos.each { entry -> %>
+
+            <li class="item ${entry.type}">
+              <figure>
+                <img src="${r('/images/portfolio/' + page.name + '/' + entry.file)}" />
+              </figure>
+              <a class="open-image" href="#"><span></span></a>
+            </li>
+
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<% } %>

@@ -1,0 +1,28 @@
+---
+layout: page
+title: "Albums"
+navigate: true
+---
+
+portfolio index.html
+
+${page.posts*.title}
+
+<section id="homepage" class="homepage">
+    <div class="inner-wrapper">
+        <div id="galleryContainer" class="content">
+            <ul class="home-gallery cf">
+                <%
+                    page.posts.each { post->
+                %>
+                <li>
+                    ${ include "album.html", post + [preview: true] }
+                </li>
+                <%
+                    }
+                %>
+            </ul>
+        </div>
+    </div>
+</section>
+

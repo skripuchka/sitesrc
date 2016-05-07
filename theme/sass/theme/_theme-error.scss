@@ -1,0 +1,41 @@
+/* Error Page
+*******************************/
+.page-404 {
+  margin: 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+  font-weight: normal;
+  font-style: normal;
+  height: 670px;
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: initial;
+  background-image: url("../img/404.png");
+}
+.page-404 .page-title h2 {
+  padding-top: 190px;
+  font-size: 30px;
+  letter-spacing: 3px;
+  font-family: 'Sabon_bold', Arial, Helvetica, sans-serif;
+  text-align: left;
+  margin: 0 0 60px;
+}
+.page-404 h4 {
+  font-size: 14px;
+  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+}
+.page-404 .message {
+  width: 90%;
+  max-width: 450px;
+  font-size: 14px;
+  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  line-height: 26px;
+  margin-bottom: 35px;
+}
+.page-404 .regards {
+  font-size: 14px;
+  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  line-height: 28px;
+}
