@@ -1,5 +1,5 @@
 ---
-layout: portfolio
+layout: post
 title: "Post sample with code"
 date: "2014-01-10 15:00"
 author: SysGears
@@ -11,8 +11,6 @@ sharing: true                     # (optional) disables/enables sharing options 
 asides: [ asides/recent_posts.html, asides/github.html,
   asides/about.html]              # (optional) asides to include into the post page, all asides are included by default
 ---
-
-<%= img src: '/images/blogs/test.jpg', alt: 'email image' %>
 
 <!--more-->
 
