@@ -1,3 +1,5 @@
+<script src="${r('/javascripts/article.js')}" type="text/javascript"></script>
+
 <%
 def postedOn = page.date
 
@@ -6,64 +8,118 @@ final String yearFormat = 'yyyy'
 final String dayFormat = 'dd'
 %>
 
-<% if (page.preview) { %>
-  <figure>
-    <img src="${r('/images/blogs/' + page.frontImage)}" />
-      <a rel="full-article" href="${link page.url}">
-        <span ></span>
+<% if (page.preview && 'portfolio' == page.layout) { %>
+<figure>
+    <img src="${r('/images/portfolio/' + page.name + '/' + page.frontImage)}"/>
+    <a rel="full-article" href="${link page.url}">
+        <span></span>
         View collection
-      </a>
-  </figure>
-  <h3>
-    <a href="${link page.url}" rel="full-article">
-      ${titleCase title: page.title}
     </a>
-  </h3>
+</figure>
+<h3>
+    <a href="${link page.url}" rel="full-article">
+        ${titleCase title: page.title}
+    </a>
+</h3>
 
-  <time datetime="${xmlDateTime date: postedOn}">
+<time datetime="${xmlDateTime date: postedOn}">
     <span class="day">${postedOn.format(dayFormat)}</span>
     <span class="month">${postedOn.format(monthFormat)}</span>
     <span class="year">${postedOn.format(yearFormat)}</span>
-  </time>
+</time>
 
-<% } else { %>
+<% } else if ('portfolio' == page.layout) { %>
 
-  <div class="gallery-single">
+<div class="gallery-single">
     <div class="inner-wrapper cf">
-      <div class="inner-header cf">
-        <div class="left-part">
+        <div class="inner-header cf">
+            <div class="left-part">
 
           <span class="cat-name">
             Category: ${page.categories.collect { it.toString() }.join(', ') }
           </span>
 
-          <h2>${page.title}</h2>
+                <h2>${page.title}</h2>
 
-          <time datetime="${xmlDateTime date: postedOn}">
-            <span class="day">${postedOn.format(dayFormat)}</span>
-            <span class="month">${postedOn.format(monthFormat)}</span>
-            <span class="year">${postedOn.format(yearFormat)}</span>
-          </time>
+                <time datetime="${xmlDateTime date: postedOn}">
+                    <span class="day">${postedOn.format(dayFormat)}</span>
+                    <span class="month">${postedOn.format(monthFormat)}</span>
+                    <span class="year">${postedOn.format(yearFormat)}</span>
+                </time>
 
-          <a class="go-back" href="/">Back</a>
+                <a class="go-back" href="/">Back</a>
 
+            </div>
         </div>
-      </div>
-      <div class="gallery-wrapper">
-        <ul id="galleryContainer" class="gallery cf">
-          <% page.photos.each { entry -> %>
+        <div class="gallery-wrapper">
+            <ul id="galleryContainer" class="gallery cf">
+                <% page.photos.each { entry -> %>
 
-            <li class="item ${entry.type}">
-              <figure>
-                <img src="${r('/images/portfolio/' + page.name + '/' + entry.file)}" />
-              </figure>
-              <a class="open-image" href="#"><span></span></a>
-            </li>
+                <li class="item ${entry.type}">
+                    <%
+                        def imgSrc = r('/images/portfolio/' + page.name + '/' + entry.file);
+                    %>
+                    <figure>
+                        <img src="${imgSrc}"/>
+                    </figure>
+                    <a class="open-image" href="#" onclick="showPreview('${imgSrc}')"><span></span></a>
+                </li>
 
-          <% } %>
-        </ul>
-      </div>
+                <% } %>
+            </ul>
+        </div>
     </div>
-  </div>
+
+    <!--gallery overview-->
+    <div id="overlayGallery" class="gallery-overlay" style="display: none;">
+        <div class="inner-wrapper cf">
+            <div class="left-part">
+                <ul id="previewList" style="height: 761px;">
+                    <li class="item landscape"
+                        data-img-src="http://larajade.co.uk/wp-content/uploads/2016/05/HKTATLER_LaraJade1.jpg">
+                        <figure>
+                            <img src="http://larajade.co.uk/wp-content/uploads/2016/05/HKTATLER_LaraJade1.jpg">
+                        </figure>
+
+                        <a class="open-image" href="#"
+                           data-href="http://larajade.co.uk/wp-content/uploads/2016/05/HKTATLER_LaraJade1-1024x694.jpg">
+                            <span></span>
+                        </a>
+                    </li>
+                </ul>
+                <a class="close-image" href="#">view all collection</a>
+            </div>
+            <div class="right-part">
+				<span class="cat-name">
+					Category:
+					Fashion				</span>
+                <h2>Tatler Hong Kong – For The Frill Of It</h2>
+                <time pubdate="2016-05-06T00:25:37+00:00">May 2016</time>
+                <div class="social-links">
+                    <ul class="cf">
+                        <li>
+                            Share
+                        </li>
+                        <li>
+                            <a class="fb" target="_blank"
+                               href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Flarajade.co.uk%2Fgallery%2Ftatler-hong-kong-for-the-frill-of-it%2F&amp;t=Tatler Hong Kong – For The Frill Of It">Facebook</a>
+                        </li>
+                        <li>
+                            <a class="twit" target="_blank"
+                               href="http://twitter.com/home?status=Tatler Hong Kong – For The Frill Of It+-+http%3A%2F%2Flarajade.co.uk%2Fgallery%2Ftatler-hong-kong-for-the-frill-of-it%2F">Twitter</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="gal-navigation">
+                    <a href="#" onclick="prevImg()" class="prev nav"></a>
+                    <a href="#" onclick="nextImg()" class="next nav"></a>
+                </div>
+                <div class="mobile">
+                    <a class="close-image" href="#" onclick="closePreview()">view all collection</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <% } %>
