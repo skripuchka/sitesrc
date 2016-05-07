@@ -53,7 +53,7 @@ section.prefooter .pre-wrapper .col2 p {
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: initial;
-  background-image: url("${r '/images/bot-separator.png'}");
+  //background-image: url("${ /*r*/ '/images/bot-separator.png'}");
 }
 section.prefooter .pre-wrapper .col2 ul.social {
   list-style-type: none;

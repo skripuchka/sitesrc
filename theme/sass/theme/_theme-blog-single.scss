@@ -30,7 +30,7 @@ article.post section.paginator .back-grid a {
   background-repeat: no-repeat;
   background-position: 5% center;
   background-size: initial;
-  background-image: url("${r '/images/arrow-r-s.png'}");
+  //background-image: url("${/*r*/ '/images/arrow-r-s.png'}");
 }
 article.post section.paginator .back-grid a:hover {
   background-position-x: 0;
@@ -43,7 +43,7 @@ article.post section.paginator .post-control a[rel="next"] {
   background-repeat: no-repeat;
   background-position: 95% center;
   background-size: initial;
-  background-image: url("${r '/images/arrow-l-s.png'}");
+  //background-image: url("${/*r*/ '/images/arrow-l-s.png'}");
 }
 article.post section.paginator .post-control a[rel="next"]:hover {
   background-position-x: 100%;
@@ -52,7 +52,7 @@ article.post section.paginator .post-control a[rel="prev"] {
   background-repeat: no-repeat;
   background-position: 5% center;
   background-size: initial;
-  background-image: url("${r '/images/arrow-r-s.png'}");
+  //background-image: url("${/*r*/ '/images/arrow-r-s.png'}");
 }
 article.post section.paginator .post-control a[rel="prev"]:hover {
   background-position-x: 0%;
@@ -132,7 +132,7 @@ article.post section.full .inner-wrapper .left-side .story blockquote {
   background-repeat: no-repeat;
   background-position: 1% 5%;
   background-size: initial;
-  background-image: url("${r '/images/quotes.png'}");
+  //background-image: url("${/*r*/ '/images/quotes.png'}");
 }
 article.post section.full .inner-wrapper .left-side .story blockquote p {
   line-height: 28px;
@@ -335,7 +335,7 @@ article.post section.full .inner-wrapper .left-side .comments .comment-form .are
   background-repeat: no-repeat;
   background-position: left bottom;
   background-size: initial;
-  background-image: url("${r '/images/msg-bg.png'}");
+  //background-image: url("${/*r*/ '/images/msg-bg.png'}");
   width: 100%;
   display: block;
   height: 190px;
@@ -426,7 +426,7 @@ article.post section.full .inner-wrapper .right-side ul li.video .open-video spa
   background-repeat: no-repeat;
   background-position: center center;
   background-size: initial;
-  background-image: url("${r '/images/play_video.png'}");
+  //background-image: url("${/*r*/ '/images/play_video.png'}");
 }
 article.post section.full .inner-wrapper .right-side ul li.video .open-video:hover span {
   -webkit-transform: rotate(120deg);

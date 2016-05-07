@@ -130,7 +130,7 @@ div.gallery-single .gallery-overlay {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  //height: 100%;
   background-color: #fff;
 }
 div.gallery-single .gallery-overlay .gal-navigation {
@@ -210,7 +210,7 @@ div.gallery-single .gallery-overlay .left-part ul::before {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: initial;
-  background-image: url("${r '/images/lazyload.gif'}");
+  //background-image: url("${/*r */'/images/lazyload.gif'}");
   -moz-opacity: 0;
   -khtml-opacity: 0;
   -webkit-opacity: 0;
@@ -403,7 +403,7 @@ div.gallery-single .inner-wrapper .gallery-wrapper ul.gallery li.video .open-ima
   background-repeat: no-repeat;
   background-position: center center;
   background-size: initial;
-  background-image: url("${r '/images/play_video.png'}");
+  //background-image: url("${/*r*/ '/images/play_video.png'}");
 }
 div.gallery-single .inner-wrapper .gallery-wrapper ul.gallery li.video .open-image:hover span {
   -webkit-transform: rotate(120deg);
