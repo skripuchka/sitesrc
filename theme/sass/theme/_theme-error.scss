@@ -1,42 +1,44 @@
 /* Error Page
 *******************************/
+$border-color: #e5e5e5;
+
 .page-404 {
   margin: 20px 0;
   padding-bottom: 20px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid $border-color;
   font-weight: normal;
   font-style: normal;
   height: 670px;
   background-repeat: no-repeat;
   background-position: right top;
   background-size: initial;
-  background-image: url("../img/404.png");
-}
-.page-404 .page-title h2 {
-  padding-top: 190px;
-  font-size: 30px;
-  letter-spacing: 3px;
-  font-family: $heading-font-family;
-  font-weight: bold;
-  text-align: left;
-  margin: 0 0 60px;
-}
-.page-404 h4 {
-  font-size: 14px;
-  font-family: $heading-font-family;
-  letter-spacing: 2px;
-  margin-bottom: 50px;
-}
-.page-404 .message {
-  width: 90%;
-  max-width: 450px;
-  font-size: 14px;
-  font-family: $heading-font-family;
-  line-height: 26px;
-  margin-bottom: 35px;
-}
-.page-404 .regards {
-  font-size: 14px;
-  font-family: $heading-font-family;
-  line-height: 28px;
+  //background-image: url(../img/404.png);
+  h4 {
+    font-size: 14px;
+    font-family: $heading-font-family;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+  }
+  .message {
+    width: 90%;
+    max-width: 450px;
+    font-size: 14px;
+    font-family: $heading-font-family;
+    line-height: 26px;
+    margin-bottom: 35px;
+  }
+  .regards {
+    font-size: 14px;
+    font-family: $heading-font-family;
+    line-height: 28px;
+  }
+  .page-title h2 {
+    padding-top: 190px;
+    font-size: 30px;
+    letter-spacing: 3px;
+    font-family: $heading-font-family;
+    font-weight: bold;
+    text-align: left;
+    margin: 0 0 60px;
+  }
 }
