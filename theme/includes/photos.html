@@ -1,0 +1,58 @@
+<script src="${r('/javascripts/photos.js')}" type="text/javascript"></script>
+
+<div class="gallery-single">
+    <div class="inner-wrapper cf">
+
+        <div class="inner-header cf">
+            <div class="left-part">
+                <h2>Quick Portfolio</h2>
+                <a class="go-back" href="/">Back To Main Gallery</a>
+            </div>
+        </div>
+        <div class="gallery-wrapper">
+            <ul id="galleryContainer" class="gallery cf">
+                <% page.photos.each { photo ->  %>
+                    <% def imgSrc = r(photo.file) %>
+                    <li class="item ${photo.type}">
+                        <figure>
+                            <img src="${imgSrc}" />
+                        </figure>
+                        <a class="open-image" href="#" onclick="showPreview('${imgSrc}')">
+                            <span></span>
+                        </a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+
+    <div id="overlayGallery" class="gallery-overlay" style="height: 100%;">
+        <div class="inner-wrapper cf">
+            <div class="left-part">
+                <ul id="previewList">
+                    <li class="item">
+                        <figure>
+                            <img src="" />
+                        </figure>
+                        <a class="open-image" href="#" >
+                            <span></span>
+                        </a>
+                    </li>
+                </ul>
+                <a class="close-image" href="#">view all collection</a>
+            </div>
+            <div class="right-part">
+
+                <h2>Quick Portfolio</h2>
+
+                <div class="gal-navigation">
+                    <a href="#" class="prev nav" onclick="prevImg()"></a>
+                    <a href="#" class="next nav" onclick="nextImg()"></a>
+                </div>
+                <div class="mobile">
+                    <a class="close-image" href="#" onclick="closePreview()">view all collection</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
