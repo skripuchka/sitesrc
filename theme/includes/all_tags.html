@@ -1,0 +1,14 @@
+<div class="header">
+    <ul class="cat-list">
+        <li>
+            <span>Select Category</span>
+            <ul class="sub-cats">
+                <% page.allTags.each { t-> %>
+                    <li>
+                        <a href="/categories/${t}">${t}</a>
+                    </li>
+                <% } %>
+            </ul>
+        </li>
+    </ul>
+</div>
