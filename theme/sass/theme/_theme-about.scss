@@ -1,11 +1,15 @@
 /* About & Clients Page
 *******************************/
+
+$about-font: 'Merriweather';
+$about-font-header-weigh: 600;
+
 .about-clients {
   font-weight: normal;
   font-style: normal;
 }
 .about-clients .inner-wrapper {
-  margin: 32px auto 0;
+  margin: 32px auto 32px;
 }
 .about-clients .col1 {
   float: left;
@@ -15,12 +19,13 @@
 }
 .about-clients .col1 h1 {
   font-size: 14px;
-  font-family: 'Sabon_bold', Arial, Helvetica, sans-serif;
+  font-family: $about-font, Arial, Helvetica, sans-serif;
   letter-spacing: 2px;
   margin-bottom: 45px;
+  font-weight: $about-font-header-weigh;
 }
 .about-clients .col1 p {
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $about-font, Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 35px;
@@ -33,7 +38,7 @@
 }
 .about-clients .col2 h3 {
   font-size: 14px;
-  font-family: 'Sabon_bold', Arial, Helvetica, sans-serif;
+  font-family: $about-font, Arial, Helvetica, sans-serif;
   letter-spacing: 2px;
   margin-bottom: 45px;
 }
@@ -42,7 +47,7 @@
 }
 .about-clients .col2 ul li {
   text-transform: uppercase;
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $about-font, Arial, Helvetica, sans-serif;
   font-size: 11px;
   line-height: 18px;
 }
