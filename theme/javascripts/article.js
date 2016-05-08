@@ -12,6 +12,7 @@ $(function () {
 function showPreview(img) {
     $currentImg = img;
 
+    $('#wrapper').css('overflow', 'hidden');
     $($('#overlayGallery #previewList .item img')[0]).attr('src', $currentImg);
     $('#overlayGallery').show();
 }
@@ -37,5 +38,6 @@ function prevImg(img) {
 }
 
 function closePreview() {
+    $('#wrapper').css('overflow', 'auto');
     $('#overlayGallery').hide();
 }
