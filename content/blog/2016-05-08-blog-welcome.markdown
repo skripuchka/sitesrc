@@ -7,8 +7,11 @@ categories: [blog]
 
 frontImage: 
     file: "stub.jpg"
-    type: "portrait"
+    type: "landscape"
     
+photos:
+    - file: "stub.jpg"
+      type: "landscape"
 comments: true
 published: true
 ---
