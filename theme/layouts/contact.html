@@ -1,0 +1,30 @@
+---
+layout: page
+title: "Contact"
+navigate: true
+---
+
+<section class="contact">
+    <div class="inner-wrapper cf">
+        <div class="col-left">
+            <h2>${page.header}</h2>
+            <div class="description-author">
+                ${page.description.author} <a href="mailto:${page.email}">${page.email}</a>
+            </div>
+            <div class="description-represent">
+                ${page.description.tel}
+                <ul class="continents cf">
+                    <li>
+                        <a class="tel" href="tel:${page.tel}">${page.tel}</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="col-right">
+            <figure>
+                <img src="${r('/images/contact/'+page.frontImage.file)}">
+            </figure>
+        </div>
+    </div>
+</section>
