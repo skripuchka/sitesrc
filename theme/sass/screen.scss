@@ -3,14 +3,6 @@
 @include global-reset;
 @include reset-html5;
 
-//
-//@import "custom/colors";
-//@import "custom/fonts";
-//@import "custom/layout";
-//@import "base";
-//@import "partials";
-
-
 @import "theme/theme-reset";
 @import "theme/theme-fonts";
 @import "theme/theme-formelements";
@@ -25,4 +17,3 @@
 @import "theme/theme-error";
 @import "theme/theme-gallery";
 @import "theme/theme-smallscreens";
-//@import "custom/styles";
