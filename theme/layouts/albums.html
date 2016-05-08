@@ -5,21 +5,19 @@ sidebar: true
 
 ---
 
-TODO: delete me: theme layouts albums.html
 
 <section id="homepage" class="homepage">
     <div class="inner-wrapper">
+
+        ${ include "all_tags.html" }
+
         <div id="galleryContainer" class="content">
             <ul class="home-gallery cf">
-                <%
-                page.posts.each { post->
-                %>
-                <li>
-                    ${ include "album.html", post + [preview: true] }
-                </li>
-                <%
-                }
-                %>
+                <% page.posts.each { post-> %>
+                    <li class="item ${post.frontImage.type}">
+                        ${ include "album.html", post + [preview: true] }
+                    </li>
+                <% } %>
             </ul>
         </div>
     </div>
