@@ -62,7 +62,9 @@ single: true
                         <ul>
                             <% page.photos.each { p-> %>
                             <li>
-                                <img src="${r('/images/blogs/' + p.file)}" />
+                                <figure>
+                                    <img src="${r('/images/blogs/' + p.file)}" />
+                                </figure>
                             </li>
                             <% } %>
                         </ul>
