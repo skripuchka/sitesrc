@@ -72,10 +72,10 @@ deploy = github_pages_deploy_cmd
  */
 
 // General settings.
-title = 'Octopress theme for Grain' // blog name for the header, title and RSS feed
-subtitle = 'Grain is a static web site building framework for Groovy' // blog brief description for the header
+title = 'Фотограф Мария Гончарова в Челябинске' // blog name for the header, title and RSS feed
+subtitle = 'Модельные тесты, свадебная съемка, семейные фото в Челябинске' // blog brief description for the header
 author = 'Mary Goncharova'                 // author name for Copyright, Metadata and RSS feed
-meta_description = ''               // blog description for Metadata
+meta_description = 'Фотосессии, Челябинск, Фотограф, Гончарова, Свадьбы, Фэшн съемка'               // blog description for Metadata
 
 // Blog and Archive.
 
@@ -188,14 +188,27 @@ asides {
         user = 'sysgears'           // Twitter (https://twitter.com/) username
     }
     facebook {
-        user = 'sysgears'           // Facebook (https://www.facebook.com/) username
+        user = 'lumiere.mariya'           // Facebook (https://www.facebook.com/) username
     }
     instagram {
-        user = ''                   // Instagram (http://instagram.com/) username
+        user = 'photograph_goncharova'                   // Instagram (http://instagram.com/) username
     }
 
     // Blog owner description.
-    about_author = 'A brief description of blog owner.'
+    about_author = 'Свадебный фотограф в Челябинске'
+}
+
+socials {
+    instagram {
+        username = 'photograph_goncharova'
+    }
+    facebook {
+        username = 'lumiere.mariya'
+    }
+    vk {
+        username = 'goncharova.mv'
+        groupId = 'lephotographe'
+    }
 }
 
 commands = [
