@@ -6,7 +6,11 @@ author: Mary
 categories: [tests]
 
 name: "album12"
-frontImage: "front.jpg"
+
+frontImage: 
+    file: "front.jpg"
+    type: 'portrait'
+      
 photos: 
     - file: "front.jpg"
       type: "portrait" 
@@ -15,9 +19,7 @@ photos:
     - file: "2.jpg"
       type: "portrait" 
     - file: "3.jpg"
-      type: "portrait" 
-    - file: "deleteme.jpg"
-      type: "landscape"
+      type: "portrait"
 
 comments: false                    # disables/enables comments section for the post
 published: true                   # defines whether to render the post in 'generate' mode

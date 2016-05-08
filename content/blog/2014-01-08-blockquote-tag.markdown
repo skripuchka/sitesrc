@@ -4,7 +4,11 @@ title: "Blockqoute tag"
 date: "2014-01-08 13:00"
 author: SysGears
 categories: [grain, groovy]
-frontImage: "test.jpg"
+
+frontImage: 
+    file: "test.jpg"
+    type: "portrait"
+    
 comments: true
 published: true
 ---
