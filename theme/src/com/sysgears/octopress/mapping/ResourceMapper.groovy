@@ -38,7 +38,7 @@ class ResourceMapper {
             resource
         }.sort { -it.date.time }
         
-        customizeModels << addSiteMenu << customizeAsides << refinedResources
+        customizeModels << addAllTags << addSiteMenu << customizeAsides << refinedResources
     }
 
     /**
@@ -94,6 +94,19 @@ class ResourceMapper {
         }
     }
 
+    private def addAllTags = { List resources ->
+        Set<String> allTags = []
+        allTags.addAll resources.collect { it.categories }.flatten().findAll { it != null }
+
+        resources.collect { Map resource ->
+            if (resource.type == 'page') {
+                resource + ['allTags': allTags]
+            } else {
+                resource
+            }
+        }
+    }
+
     /**
      * Customizes pages models, applies pagination (creates new pages)
      */
@@ -101,7 +114,7 @@ class ResourceMapper {
         def posts = resources.findAll { it.layout == 'post' }
         Set<String> tags = posts.inject([]) { List tags, Map post -> tags + post.categories }
 
-        def postsByCategory = { tag -> posts.findAll { post -> tag in post.categories } }
+        def postsByCategory = { tag -> resources.findAll { post -> tag in post.categories } }
 
         def postsByAuthor = posts.groupBy { it.author }
 
@@ -113,7 +126,7 @@ class ResourceMapper {
             }
             switch (page.url) {
                 case '/':
-                    applyPagination(albums, site.posts_per_blog_page, page.url)
+                    applyPagination(albums, 30, page.url)
                     break
                 case '/archives/':
                     applyPagination(posts, site.posts_per_archive_page, page.url)
@@ -121,12 +134,12 @@ class ResourceMapper {
                 case '/authors/':
                     postsByAuthor.each { String author, List items ->
                         if (author) {
-                            applyPagination(items, site.posts_per_blog_page, "${page.url}${author.encodeAsSlug()}/", [author: author])
+                            //applyPagination(items, site.posts_per_blog_page, "${page.url}${author.encodeAsSlug()}/", [author: author])
                         }
                     }
                     break
                 case '/categories/':
-                    tags.each { String tag ->
+                    page.allTags.each { String tag ->
                         applyPagination(postsByCategory(tag), site.posts_per_blog_page, "${page.url}${tag.encodeAsSlug()}/", [tag: tag])
                     }
                     break
@@ -142,6 +155,25 @@ class ResourceMapper {
                         def feedUrl = "/categories/${tag.encodeAsSlug()}/atom.xml"
                         page + [url: feedUrl, tag: tag, posts: postsByCategory(tag).take(maxRss)]
                     }
+                    break
+                case '/photos/' :
+                    def photos = []
+                    resources.each {
+                        if (it.layout == 'portfolio') {
+                            photos << [file: '/images/portfolio/' + it.name + '/' + it.frontImage.file, type: it.frontImage.type]
+                            photos << it.photos.collectEntries { pe -> [file: '/images/portfolio/' + it.name + '/' + pe.file, type: pe.type] }
+                        } else if (it.layout == 'post') {
+                            if (it.frontImage) {
+                                //TODO: change system of placing photos for blogs
+                                //photos << [file: '/images/blogs/' + it.frontImage.file, type: it.frontImage.type]
+                            }
+                        }
+                    }
+                    // shuffle photos
+                    long seed = System.nanoTime()
+                    Collections.shuffle(photos, new Random(seed))
+                    Collections.shuffle(photos, new Random(seed))
+                    applyPagination(photos.flatten() , 40, page.url)
                     break
                 case ~/\/blog\/.*/:
                     def post = resources.find { it.url == page.url }
