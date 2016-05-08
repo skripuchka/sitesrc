@@ -10,7 +10,7 @@
   float: left;
   margin: 7px 7px 40px;
   text-align: center;
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
   font-size: 14px;
   height: 570px;
 }
@@ -97,11 +97,11 @@
   transform: rotate(180deg);
 }
 .gallery-archive ul li .cat {
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
   font-size: 14px;
 }
 .gallery-archive ul li h3 {
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
   font-size: 14px;
   margin: 15px 0;
   letter-spacing: 1px;
@@ -110,7 +110,8 @@
   color: #000;
 }
 .gallery-archive ul li time {
-  font-family: 'Sabon_italic', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
+  font-style: italic;
   font-size: 14px;
 }
 div.gallery-single {
@@ -175,7 +176,8 @@ div.gallery-single .gallery-overlay .close-image {
   background-size: initial;
   background-image: url("${r '/images/view-all.png'}");
   display: inline-block;
-  font-family: 'Sabon_italic', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
+  font-style: italic;
   font-size: 14px;
   color: #000;
   -webkit-transition: 0.3s;
@@ -264,26 +266,28 @@ div.gallery-single .gallery-overlay .right-part {
 }
 div.gallery-single .gallery-overlay .right-part .cat-name {
   font-size: 14px;
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
 }
 div.gallery-single .gallery-overlay .right-part h2 {
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
   font-size: 14px;
   margin: 10px 0;
 }
 div.gallery-single .gallery-overlay .right-part time {
-  font-family: 'Sabon_italic', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
+  font-style: italic;
   font-size: 14px;
 }
 div.gallery-single .gallery-overlay .right-part ul {
   color: #000;
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
   font-size: 14px;
   line-height: 24px;
   margin-top: 65px;
 }
 div.gallery-single .gallery-overlay .right-part ul a {
-  font-family: 'Sabon_italic', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
+  font-style: italic;
   text-decoration: underline;
   color: #000;
 }
@@ -304,15 +308,16 @@ div.gallery-single .inner-wrapper .inner-header .left-part {
 }
 div.gallery-single .inner-wrapper .inner-header .left-part .cat-name {
   font-size: 14px;
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
 }
 div.gallery-single .inner-wrapper .inner-header .left-part h2 {
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
   font-size: 14px;
   margin: 10px 0;
 }
 div.gallery-single .inner-wrapper .inner-header .left-part time {
-  font-family: 'Sabon_italic', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
+  font-style: italic;
   font-size: 14px;
 }
 div.gallery-single .inner-wrapper .inner-header .left-part a.go-back {
@@ -331,7 +336,8 @@ div.gallery-single .inner-wrapper .inner-header .left-part a.go-back {
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  font-family: 'Sabon_italic', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
+  font-style: italic;
   font-size: 14px;
   bottom: 0;
   left: 5px;
@@ -350,12 +356,13 @@ div.gallery-single .inner-wrapper .inner-header .right-part {
 }
 div.gallery-single .inner-wrapper .inner-header .right-part ul {
   color: #000;
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
   font-size: 14px;
   line-height: 24px;
 }
 div.gallery-single .inner-wrapper .inner-header .right-part ul a {
-  font-family: 'Sabon_italic', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
+  font-style: italic;
   text-decoration: underline;
   color: #000;
 }

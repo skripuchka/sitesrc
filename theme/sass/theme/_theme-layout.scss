@@ -24,7 +24,7 @@ section.prefooter .pre-wrapper .col1 a {
   font-size: 24px;
   text-transform: uppercase;
   padding-right: 15px;
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
   letter-spacing: 15px;
   background-repeat: no-repeat;
   background-position: right 40%;
@@ -46,7 +46,8 @@ section.prefooter .pre-wrapper .col2 {
 }
 section.prefooter .pre-wrapper .col2 p {
   text-align: center;
-  font-family: 'Sabon_italic', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
+  font-style: italic;
   font-size: 14px;
   margin: 20px 0;
   padding-bottom: 15px;
@@ -76,7 +77,7 @@ section.prefooter .pre-wrapper .col2 ul.social li:last-child {
 }
 section.prefooter .pre-wrapper .col2 ul.social li a {
   color: #000;
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
   font-size: 14px;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -98,14 +99,15 @@ section.prefooter .pre-wrapper .col3 {
 section.prefooter .pre-wrapper .col3 p {
   max-width: 240px;
   text-align: center;
-  font-family: 'Sabon_italic', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
+  font-style: italic;
   font-size: 14px;
   line-height: 24px;
   margin: 0 auto 25px;
 }
 section.prefooter .pre-wrapper .col3 a {
   color: #000;
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
   font-size: 14px;
   text-decoration: underline;
   text-transform: uppercase;
@@ -123,7 +125,8 @@ section.prefooter.contact-page .pre-wrapper .col3 a {
   font-size: 24px;
   text-transform: uppercase;
   padding-right: 15px;
-  font-family: 'Sabon_italic', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
+  font-style: italic;
   letter-spacing: 15px;
   text-decoration: none;
 }
@@ -163,14 +166,15 @@ div.archives .flo-archives .left-side {
 }
 div.archives .flo-archives .left-side .a {
   font-size: 14px;
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
   text-transform: capitalize;
 }
 div.archives .flo-archives .left-side .year {
   margin-top: 20px;
   font-size: 24px;
   color: #000;
-  font-family: 'Sabon_italic', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
+  font-style: italic;
   letter-spacing: 5px;
   position: relative;
   height: 225px;
@@ -228,7 +232,7 @@ div.archives .flo-archives .right-side .months .year-months ul li:hover div.hove
 }
 div.archives .flo-archives .right-side .months .year-months ul li a {
   color: #fff;
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
   font-size: 24px;
   font-weight: normal;
   position: absolute;
@@ -256,7 +260,7 @@ div.archives .flo-archives .right-side .months .year-months ul li a span {
 }
 div.archives .flo-archives .right-side .months .year-months ul li span {
   color: #000;
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
   font-weight: normal;
   position: absolute;
   top: 55px;
@@ -286,7 +290,7 @@ footer.footer-main {
   border-top: 1px solid #e5e5e5;
   font-weight: normal;
   font-style: normal;
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
   font-size: 14px;
   text-align: center;
 }

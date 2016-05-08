@@ -14,7 +14,8 @@ section.blog-items .back-to-cat {
 }
 section.blog-items .back-to-cat a {
   color: #000;
-  font-family: 'Sabon_italic', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
+  font-style: italic;
   font-size: 14px;
 }
 section.blog-items .back-to-cat a h6 {
@@ -70,7 +71,7 @@ section.blog-items section.featured-post ul.featured-slider li figure img {
   height: auto;
 }
 section.blog-items section.featured-post ul.featured-slider li .cat-name {
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
   font-size: 14px;
 }
 section.blog-items section.featured-post ul.featured-slider li .cat-name a {
@@ -88,7 +89,7 @@ section.blog-items section.featured-post ul.featured-slider li .cat-name a:hover
   border-color: #000;
 }
 section.blog-items section.featured-post ul.featured-slider li h2 {
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
   font-size: 36px;
   letter-spacing: 2px;
   margin: 10px 0 15px;
@@ -107,7 +108,8 @@ section.blog-items section.featured-post ul.featured-slider li h2 a:hover {
 }
 section.blog-items section.featured-post ul.featured-slider li time {
   font-size: 14px;
-  font-family: 'Sabon_italic', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
+  font-style: italic;
 }
 section.blog-items section.featured-post a.post-nav {
   display: block;
@@ -174,7 +176,8 @@ section.blog-items div.header ul.cat-list:hover li ul {
   opacity: 1;
 }
 section.blog-items div.header ul.cat-list li {
-  font-family: 'Sabon_italic', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
+  font-style: italic;
   font-size: 14px;
   color: #000;
 }
@@ -296,16 +299,17 @@ section.blog-items div.post-items ul li figure a span {
   background-image: url("${r '/images/plus-circle.png'}");
 }
 section.blog-items div.post-items ul li .cat-name {
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
   font-size: 14px;
 }
 section.blog-items div.post-items ul li h3 {
   margin: 10px 0 15px;
   font-size: 14px;
   text-transform: uppercase;
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
 }
 section.blog-items div.post-items ul li time {
-  font-family: 'Sabon_italic', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
+  font-style: italic;
   font-size: 14px;
 }

@@ -1,41 +1,42 @@
 /* Content
 *******************************/
+//colors
+$font-color: #000;
+
+//fonts
 .content-main {
   position: relative;
   padding-top: 86px;
   flex: 1;
-}
-.content-main .page-title h2 {
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
-  font-size: 30px;
-  letter-spacing: 2px;
-  margin: 100px 0;
-  text-align: center;
-}
-.content-main .back-to-cat {
-  position: absolute;
-  left: 0;
-  top: -140px;
-}
-.content-main .back-to-cat a {
-  color: #000;
-  font-family: 'Sabon_italic', Arial, Helvetica, sans-serif;
-  font-size: 14px;
-}
-.content-main .back-to-cat a h6 {
-  font-size: 14px;
-  text-transform: uppercase;
-  margin: 0;
-}
-.content-main .back-to-cat a i {
-  position: relative;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  left: 0;
-}
-.content-main .back-to-cat a:hover i {
-  left: -5px;
+  .back-to-cat {
+    position: absolute;
+    left: 0;
+    top: -140px;
+    a {
+      color: $font-color;
+      font-family: $heading-font-family;
+      font-style: italic;
+      font-size: 14px;
+      h6 {
+        font-size: 14px;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      i {
+        position: relative;
+        transition: 0.3s;
+        left: 0;
+      }
+      &:hover i {
+        left: -5px;
+      }
+    }
+  }
+  .page-title h2 {
+    font-family: $heading-font-family;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin: 100px 0;
+    text-align: center;
+  }
 }

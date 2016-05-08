@@ -15,26 +15,28 @@ section.contact .inner-wrapper .col-left {
   padding-top: 5px;
 }
 section.contact .inner-wrapper .col-left h2 {
-  font-family: 'Sabon_bold', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
+  font-weight: bold;
   font-size: 14px;
   letter-spacing: 3px;
   margin-bottom: 50px;
 }
 section.contact .inner-wrapper .col-left .description-author {
   font-size: 14px;
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
   line-height: 26px;
   margin-bottom: 35px;
 }
 section.contact .inner-wrapper .col-left .description-author a {
   display: block;
-  font-family: 'Sabon_italic', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
+  font-style: italic;
   font-size: 14px;
   color: #000;
   text-decoration: underline;
 }
 section.contact .inner-wrapper .col-left .description-represent {
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
   font-size: 14px;
   line-height: 26px;
 }
@@ -50,12 +52,14 @@ section.contact .inner-wrapper .col-left .description-represent ul li:nth-child(
   margin-left: 10%;
 }
 section.contact .inner-wrapper .col-left .description-represent ul li h4 {
-  font-family: 'Sabon_bold', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
+  font-weight: bold;
   letter-spacing: 3px;
   margin-bottom: 25px;
 }
 section.contact .inner-wrapper .col-left .description-represent ul li a {
-  font-family: 'Sabon_italic', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
+  font-style: italic;
   color: #000;
   display: block;
 }

@@ -7,7 +7,8 @@
   top: 0;
 }
 div.header {
-  font-family: 'Sabon_italic', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
+  font-style: italic;
   font-size: 14px;
 }
 div.header a {
@@ -52,7 +53,8 @@ div.header ul.cat-list:hover li ul {
   opacity: 1;
 }
 div.header ul.cat-list li {
-  font-family: 'Sabon_italic', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
+  font-style: italic;
   font-size: 14px;
   color: #000;
 }
@@ -101,7 +103,7 @@ section.homepage div.content ul.home-gallery li {
   float: left;
   margin: 7px 7px 40px;
   text-align: center;
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
   font-size: 14px;
   height: 570px;
 }
@@ -187,11 +189,11 @@ section.homepage div.content ul.home-gallery li figure a:hover span {
   transform: rotate(180deg);
 }
 section.homepage div.content ul.home-gallery li .cat {
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
   font-size: 14px;
 }
 section.homepage div.content ul.home-gallery li h3 {
-  font-family: 'Sabon_roman', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
   font-size: 14px;
   margin: 15px 0;
   letter-spacing: 1px;
@@ -200,6 +202,7 @@ section.homepage div.content ul.home-gallery li h3 a {
   color: #000;
 }
 section.homepage div.content ul.home-gallery li time {
-  font-family: 'Sabon_italic', Arial, Helvetica, sans-serif;
+  font-family: $heading-font-family;
+  font-style: italic;
   font-size: 14px;
 }
