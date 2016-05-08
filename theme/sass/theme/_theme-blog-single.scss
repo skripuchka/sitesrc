@@ -30,7 +30,7 @@ article.post section.paginator .back-grid a {
   background-repeat: no-repeat;
   background-position: 5% center;
   background-size: initial;
-  //background-image: url("${/*r*/ '/images/arrow-r-s.png'}");
+  background-image: url("${r '/images/arrow-r-s.png'}");
 }
 article.post section.paginator .back-grid a:hover {
   background-position-x: 0;
@@ -43,7 +43,7 @@ article.post section.paginator .post-control a[rel="next"] {
   background-repeat: no-repeat;
   background-position: 95% center;
   background-size: initial;
-  //background-image: url("${/*r*/ '/images/arrow-l-s.png'}");
+  background-image: url("${r '/images/arrow-l-s.png'}");
 }
 article.post section.paginator .post-control a[rel="next"]:hover {
   background-position-x: 100%;
@@ -52,7 +52,7 @@ article.post section.paginator .post-control a[rel="prev"] {
   background-repeat: no-repeat;
   background-position: 5% center;
   background-size: initial;
-  //background-image: url("${/*r*/ '/images/arrow-r-s.png'}");
+  background-image: url("${r '/images/arrow-r-s.png'}");
 }
 article.post section.paginator .post-control a[rel="prev"]:hover {
   background-position-x: 0%;
