@@ -3,35 +3,99 @@ layout: default
 single: true
 ---
 
-theme layouts post
+<%
+    def postedOn = page.date
+
+    final String monthFormat = 'MMM'
+    final String yearFormat = 'yyyy'
+    final String dayFormat = 'dd'
+
+    def hasNext = page.next_post != null
+    def hasPrev = page.prev_post != null
+%>
+
+<div id="post" class="content">
+    <article class="post">
+        <section class="paginator">
+            <div class="inner-wrapper cf">
+                <div class="back-grid">
+                    <a href="/archives/">Back to Grid</a>
+                </div>
+                <div class="post-control">
+                    <% if (hasPrev) { %>
+                        <a href="${link page.prev_post?.url}" rel="prev">Prev. Post</a>
+                    <% } %>
+                    <% if (hasPrev && hasNext) {%>
+                        <span>/</span>
+                    <% } %>
+                    <% if (hasNext) { %>
+                        <a href="${link page.next_post?.url}" rel="next">Next. Post</a>
+                    <% } %>
+                </div>
+            </div>
+        </section>
+
+        <section class="full">
+
+            <div class="inner-wrapper cf">
+                <div class="title cf">
+                    <div class="left-side">
+                        <div class="title cf">
+                            <span class="cat-name">
+                                Category:
+                                <% page.categories.each { cat -> %>
+                                    <a href="/categories/${cat}">${cat}</a>
+                                <% } %>
+                            </span>
+                            <h2>${page.title}</h2>
+                            <time datetime="${xmlDateTime date: postedOn}">
+                                <span class="month">${postedOn.format(monthFormat)}</span>
+                                <span class="year">${postedOn.format(yearFormat)}</span>
+                            </time>
+                        </div>
+
+                        <section class="story cf">
+                            ${content}
+                        </section>
+                    </div>
+                    <div class="right-side">
+                        <ul>
+                            <% page.photos.each { p-> %>
+                            <li>
+                                <img src="${r('/images/blogs/' + p.file)}" />
+                            </li>
+                            <% } %>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="paginator">
+            <div class="inner-wrapper cf">
+                <div class="back-grid">
+                    <a href="/archives/">Back to Grid</a>
+                </div>
+                <div class="post-control">
+                    <% if (hasPrev) { %>
+                        <a href="${link page.prev_post?.url}" rel="prev">Prev. Post</a>
+                    <% } %>
+                    <% if (hasPrev && hasNext) {%>
+                        <span>/</span>
+                    <% } %>
+                    <% if (hasNext) { %>
+                        <a href="${link page.next_post?.url}" rel="next">Next. Post</a>
+                    <% } %>
+                </div>
+            </div>
+        </section>
+    </article>
+</div>
 
 <div class="blog-index on-post">
-<article class="hentry" role="article">
-  ${include 'article.html', [content: content]}
-  <footer>
-    <p class="meta">
-      ${include 'post/author.html'}
-      ${include 'post/date.html', [when: 'updated']}
-      ${include 'post/categories.html'}
-    </p>
-    <% if (page.sharing != null ? page.sharing : true) { %>
-      ${include 'post/sharing.html'}
-    <% } %>
-    <p class="meta">
-      <% if (page.prev_post?.url) { %>
-        <a class="basic-alignment left" href="${link page.prev_post.url}" title="Previous Post: ${page.prev_post.title}">&laquo; ${titleCase title: page.prev_post.title}</a>
-      <% } %>
-      <% if (page.next_post?.url) { %>
-        <a class="basic-alignment right" href="${link page.next_post.url}" title="Next Post: ${page.next_post.title}">${titleCase title: page.next_post.title} &raquo;</a>
-      <% } %>
-    </p>
-  </footer>
-</article>
-<% if (site.disqus.short_name && page.comments == true) { %>
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite">${include 'post/disqus_thread.html'}</div>
-  </section>
-<% } %>
+    <article class="hentry" role="article">
+        ${include 'article.html', [content: content]}
+    </article>
 </div>
-${include 'sidebar.html'}
