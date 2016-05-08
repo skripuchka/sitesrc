@@ -4,21 +4,77 @@ index: true
 sidebar: true
 ---
 
-<section id="homepage" class="homepage">
-    <div class="inner-wrapper">
-        <div id="galleryContainer" class="content">
-            <ul class="home-gallery cf">
-                <%
-                    page.posts.each { post->
-                        def brief = post.render().content.split('<!--more-->').head()
-                %>
-                <li>
-                    ${ include "article.html", post + [brief: brief, preview: true] }
+<%
+def featuredPost = page.posts.first()
+
+def postedOn = page.date
+
+final String monthFormat = 'MMM'
+final String yearFormat = 'yyyy'
+final String dayFormat = 'dd'
+%>
+
+<section class="blog-items">
+    <section class="featured-post">
+        <div class="inner-wrapper">
+            <ul id="featuredSlider" class="featured-slider cf">
+                <li class="active">
+                    <figure>
+                        <a href="${featuredPost.url}">
+                            <% if ('post' == featuredPost.layout) { %>
+                                <img src="${r('/images/blogs/' + featuredPost.frontImage.file)}"/>
+                            <% } else if ('portfolio' == featuredPost.layout) {%>
+                                <img src="${r('/images/portfolio/' + featuredPost.name + '/' + featuredPost.frontImage.file)}"/>
+                            <% } %>
+                        </a>
+                    </figure>
+                    <div class="cat-name">
+                        Category:
+                        <% featuredPost.categories.each { cat -> %>
+                            <a href="/categories/${cat}" rel="category tag">${cat}</a>
+                        <% } %>
+                    </div>
+                    <h2>
+                        <a href="${featuredPost.url}">${featuredPost.title}</a>
+                    </h2>
+                    <time datetime="${xmlDateTime date: postedOn}">
+                        <span class="day">${postedOn.format(dayFormat)}</span>
+                        <span class="month">${postedOn.format(monthFormat)}</span>
+                        <span class="year">${postedOn.format(yearFormat)}</span>
+                    </time>
                 </li>
-                <%
-                    }
-                %>
             </ul>
         </div>
+
+    </section>
+    <div class="inner-wrapper">
+        ${ include 'all_tags.html' }
+
+        <div class="post-items">
+            <ul id="gridContainer" class="cf">
+                <% (page.posts-featuredPost).each { p ->%>
+                    <li class="item ${p.frontImage.type}">
+                        <figure>
+                            <% if ('post' == p.layout) { %>
+                                <img src="${r('/images/blogs/' + p.frontImage.file)}" />
+                            <% } else if ('portfolio' == p.layout) {%>
+                                <img src="${r('/images/portfolio/' + p.name + '/' + p.frontImage.file)}"/>
+                            <% } %>
+
+                            <a href="${p.url}"><span></span>Open Post</a>
+                        </figure>
+                        <div class="cat-name">
+                            Category: ${p.categories.join(', ')}
+                        </div>
+                        <h3>${p.title}</h3>
+                        <time datetime="${xmlDateTime date: p.date}">
+                            <span class="month">${p.date.format(monthFormat)}</span>
+                            <span class="year">${p.date.format(yearFormat)}</span>
+                        </time>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+
     </div>
 </section>
