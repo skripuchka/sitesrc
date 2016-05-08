@@ -156,6 +156,12 @@
   background-size: initial;
   background-image: url("${r '/images/search.png'}");
 }
+.header-main .nav-main .social a.vk {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: initial;
+  background-image: url("${r '/images/vk.svg'}");
+}
 .header-main .nav-main .social a:hover {
   top: -3px;
 }
