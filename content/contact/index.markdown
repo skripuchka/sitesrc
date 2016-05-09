@@ -5,7 +5,7 @@ title: "Contact"
 header: "Contact"
 
 email: "goncharova.mv@gmail.com"
-tel: "+7 (908) 935 19-65 "
+tel: ""
 
 navigate: true
 

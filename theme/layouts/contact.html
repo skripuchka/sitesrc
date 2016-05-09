@@ -13,11 +13,13 @@ navigate: true
             </div>
             <div class="description-represent">
                 ${page.description.tel}
-                <ul class="continents cf">
-                    <li>
-                        <a class="tel" href="tel:${page.tel}">${page.tel}</a>
-                    </li>
-                </ul>
+                <% if (page.tel) { %>
+                    <ul class="continents cf">
+                        <li>
+                            <a class="tel" href="tel:${page.tel}">${page.tel}</a>
+                        </li>
+                    </ul>
+                <% } %>
             </div>
 
         </div>
