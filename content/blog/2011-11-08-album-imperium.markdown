@@ -1,6 +1,6 @@
 ---
 layout: portfolio
-title: "The Black Sun"
+title: "Imperium"
 date: "2011-11-08 15:00"
 author: Mary
 categories: [fashion]

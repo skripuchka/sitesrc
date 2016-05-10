@@ -1,6 +1,6 @@
 ---
 layout: portfolio
-title: "Ксения и Вадим"
+title: "Love story"
 date: "2013-06-29 15:00"
 author: Mary
 categories: [lovestory]

@@ -1,6 +1,6 @@
 ---
 layout: portfolio
-title: "Spirit"
+title: "At the railway station"
 date: "2013-04-05 15:00"
 author: Mary
 categories: [fashion]
