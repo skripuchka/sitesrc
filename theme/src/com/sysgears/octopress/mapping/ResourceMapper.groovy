@@ -160,8 +160,13 @@ class ResourceMapper {
                     def photos = []
                     resources.each {
                         if (it.layout == 'portfolio') {
-                            photos << [file: '/images/portfolio/' + it.name + '/' + it.frontImage.file, type: it.frontImage.type]
-                            photos << it.photos.collectEntries { pe -> [file: '/images/portfolio/' + it.name + '/' + pe.file, type: pe.type] }
+                            def toAdd = []
+                            toAdd <<  [file: '/images/portfolio/' + it.name + '/' + it.frontImage.file, type: it.frontImage.type]
+                            it.photos.each { f ->
+                                toAdd << [file: '/images/portfolio/' + it.name + '/' + f.file, type: f.type]
+                            }
+
+                            photos.addAll toAdd.flatten()
                         } else if (it.layout == 'post') {
                             if (it.frontImage) {
                                 //TODO: change system of placing photos for blogs
@@ -173,7 +178,7 @@ class ResourceMapper {
                     long seed = System.nanoTime()
                     Collections.shuffle(photos, new Random(seed))
                     Collections.shuffle(photos, new Random(seed))
-                    applyPagination(photos.flatten() , 40, page.url)
+                    applyPagination(photos.flatten() , 100, page.url)
                     break
                 case ~/\/blog\/.*/:
                     def post = resources.find { it.url == page.url }
