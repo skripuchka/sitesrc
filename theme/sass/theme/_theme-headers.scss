@@ -6,7 +6,6 @@
   width: 100%;
   min-width: 320px;
   margin: 0 auto;
-  overflow: hidden;
   font-weight: normal;
   font-style: normal;
 
@@ -15,6 +14,7 @@
   flex-direction: column;
 
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .inner-wrapper {
   max-width: 1350px;

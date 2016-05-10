@@ -75,7 +75,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: initial;
-    background-image: url("${r('/images/fb.png')}");
+    background-image: url("${r('/images/fb_beta.png')}");
   }
   .header-main .nav-main .social a.twit {
     width: 78px;
@@ -88,12 +88,26 @@
     width: 60px;
     background-size: 60px 60px;
   }
+
+  .header-main .nav-main .social a.vk {
+    width: 60px;
+    background-size: 60px 60px;
+  }
+
+  .header-main .nav-main .social a.fb {
+    width: 60px;
+    background-size: 60px 60px;
+  }
+
   .header-main .nav-main .social a#searchBtn {
     display: none;
   }
   .header-main .logo a {
     width: 100%;
     float: none;
+
+    font-size: 20px;
+    text-align: center;
   }
   .header-main .search-bar {
     top: 620px;
