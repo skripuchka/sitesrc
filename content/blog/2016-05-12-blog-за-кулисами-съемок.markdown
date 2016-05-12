@@ -6,7 +6,7 @@ author:
 categories: [blog]
 
 frontImage: 
-    file: "backstage-daria/front.jpg"
+    file: "backstage-daria/front.png"
     type: "portrait"
     
 photos:
