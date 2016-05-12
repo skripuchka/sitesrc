@@ -1,0 +1,43 @@
+---
+layout: portfolio
+title: "Daria"
+date: "2016-05-11 15:00"
+author: Mary
+categories: [tests]
+
+name: "album13"
+
+frontImage: 
+    file: "front.jpg"
+    type: 'portrait'
+      
+photos: 
+    - file: "front.jpg"
+      type: "portrait" 
+    - file: "daria_lingery_1.jpg"
+      type: "portrait" 
+    - file: "daria_lingery_2.jpg"
+      type: "portrait" 
+    - file: "daria_lingery_3.jpg"
+      type: "portrait" 
+    - file: "daria_lingery_4.jpg"
+      type: "portrait" 
+    - file: "daria_lingery_5.jpg"
+      type: "landscape"
+
+comments: false                    # disables/enables comments section for the post
+published: true                   # defines whether to render the post in 'generate' mode
+sharing: false                     # (optional) disables/enables sharing options for the post, 'true' is by default
+
+---
+
+<!--more-->
+
+<span>
+test
+</span>
+
+
+
+
+
