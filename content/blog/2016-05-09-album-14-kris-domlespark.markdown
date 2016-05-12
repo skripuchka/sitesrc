@@ -1,6 +1,6 @@
 ---
 layout: portfolio
-title: "Кристина"
+title: "Kriss"
 date: "2016-05-09 15:00"
 author: Mary
 categories: [tests]
