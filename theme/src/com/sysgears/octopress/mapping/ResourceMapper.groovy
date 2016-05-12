@@ -178,7 +178,7 @@ class ResourceMapper {
                     long seed = System.nanoTime()
                     Collections.shuffle(photos, new Random(seed))
                     Collections.shuffle(photos, new Random(seed))
-                    applyPagination(photos.flatten() , 100, page.url)
+                    applyPagination(photos.flatten() , 200, page.url)
                     break
                 case ~/\/blog\/.*/:
                     def post = resources.find { it.url == page.url }
