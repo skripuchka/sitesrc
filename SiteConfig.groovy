@@ -24,7 +24,7 @@ environments {
     }
     prod {
         log.info 'Production environment is used'
-        url = '' // the site URL, for instance http://example.com
+        url = 'http://photo-goncharova.ru' // the site URL, for instance http://example.com
         show_unpublished = false
         features {
             minify_xml = true
@@ -215,7 +215,7 @@ commands = [
 'create-post': { String postTitle ->
     def date = new Date()
     def fileDate = date.format("yyyy-MM-dd")
-    def filename = fileDate + "-" + postTitle.encodeAsSlug() + ".markdown"
+    def filename = fileDate + "-blog-" + postTitle.encodeAsSlug() + ".markdown"
     def blogDir = new File(content_dir + "/blog/")
     if (!blogDir.exists()) {
         blogDir.mkdirs()
@@ -245,5 +245,53 @@ published: false
 layout: page
 title: "${pageTitle}"
 navigate: true
+categories: []
+
+frontImage:
+    file: "front.jpg"
+    type: '' # could be of type portrait or landscape
+
+photos:
+    - file: "front.jpg"
+      type: ""
+
+comments: false                    # disables/enables comments section for the post
+published: true                   # defines whether to render the post in 'generate' mode
+sharing: false
 ---
-""")}]
+""")},
+'create-album': { String albumName, String pageTitle ->
+    def date = new Date()
+    def fileDate = date.format("yyyy-MM-dd")
+    file filename = fileDate + "-album-" + albumName + postTitle.encodeAsSlug() + ".markdown"
+    def blogDir = new File(content_dir + "/blog/")
+    if (!blogDir.exists()) {
+        blogDir.mkdirs()
+    }
+    def file = new File(blogDir, filename)
+
+    file.exists() || file.write("""---
+layout: portfolio
+title: "${pageTitle}"
+date: "${date.format(datetime_format)}"
+author: Mary
+categories: []
+
+name: "${albumName}"
+
+frontImage:
+    file: "front.jpg"
+    type: '' # could be of type portrait or landscape
+
+photos:
+    - file: "front.jpg"
+      type: ""
+
+comments: false                    # disables/enables comments section for the post
+published: true                   # defines whether to render the post in 'generate' mode
+sharing: false                     # (optional) disables/enables sharing options for the post, 'true' is by default
+
+---
+""")
+}
+]
