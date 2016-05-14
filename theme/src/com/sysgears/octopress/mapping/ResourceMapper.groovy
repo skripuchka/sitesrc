@@ -148,7 +148,7 @@ class ResourceMapper {
                     def lastUpdated = new Date(posts.max { it.updated.time }.updated.time as Long)
 
                     // default feed
-                    updatedResources << (page + [posts: resources.take(maxRss), lastUpdated: lastUpdated])
+                    updatedResources << (page + [posts: resources.findAll {it.layout in ['post', 'portfolio']}.take(maxRss), lastUpdated: lastUpdated])
 
                     // feed for each category
                     updatedResources += tags.collect { String tag ->

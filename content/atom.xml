@@ -19,7 +19,17 @@
     <link href="${site.url}${post.url}"/>
     <updated>${xmlDateTime date: post.updated}</updated>
     <id>${post.url}</id>
-    <content type="html"><![CDATA[${post.render().content}]]></content>
+    <content type="html">
+      <![CDATA[
+        <% if ( 'post' == post.layout ) {%>
+          ${post.render().content}
+          <img src="${r('/images/blogs/' + post.frontImage.file)}" />
+        <% } else  if( 'portfolio' == post.layout) { %>
+          <img src="${r('/images/portfolio/' + post.name + '/' + post.frontImage.file)}"/>
+        <% } %>
+        <a href="${site.url}${post.url}">See more</a>
+      ]]>
+    </content>
   </entry>
 <% } %>
 </feed>
