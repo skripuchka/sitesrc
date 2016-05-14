@@ -13,6 +13,8 @@ frontImage:
       
 photos: 
     - file: "front.jpg"
+      type: "landscape"
+    - file: "retouch_nasty.jpg"
       type: "landscape" 
 
 comments: false                    # disables/enables comments section for the post
