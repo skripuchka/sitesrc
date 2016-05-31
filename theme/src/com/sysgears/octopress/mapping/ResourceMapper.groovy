@@ -166,7 +166,7 @@ class ResourceMapper {
                                 toAdd << [file: '/images/portfolio/' + it.name + '/' + f.file, type: f.type]
                             }
 
-                            photos.addAll toAdd.flatten()
+                            photos.addAll toAdd.flatten().toSet()
                         } else if (it.layout == 'post') {
                             if (it.frontImage) {
                                 //TODO: change system of placing photos for blogs
