@@ -263,7 +263,7 @@ sharing: false
 'create-album': { String albumName, String pageTitle ->
     def date = new Date()
     def fileDate = date.format("yyyy-MM-dd")
-    file filename = fileDate + "-album-" + albumName + postTitle.encodeAsSlug() + ".markdown"
+    def filename = fileDate + "-album-" + albumName + pageTitle.encodeAsSlug() + ".markdown"
     def blogDir = new File(content_dir + "/blog/")
     if (!blogDir.exists()) {
         blogDir.mkdirs()
